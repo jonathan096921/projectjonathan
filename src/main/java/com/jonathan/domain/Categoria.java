@@ -2,10 +2,19 @@ package com.jonathan.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+
+@Entity
 public class Categoria implements Serializable{
 	
 
 	private static final long serialVersionUID = 1L;
+	
+	@javax.persistence.Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Integer Id;
 	public String nome;
 	
